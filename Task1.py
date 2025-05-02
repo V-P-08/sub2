@@ -1,5 +1,7 @@
-a = int(input("Enter  number : "))
-if a%2==0 :
-    print(a, " is an even number")
-else :
-    print(a, " is an odd number")
+try :
+    f1 = open('sample.txt', 'r')
+    op = f1.read()
+    print(op)
+    f1.close()
+except FileNotFoundError:
+    print("Sorry! 'Sample.txt' was not found.")
