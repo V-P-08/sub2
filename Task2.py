@@ -1,4 +1,20 @@
-x = 0
-for i in range (1,51):
-    x = x + i
-print("The sum of numbers from 1 to 50 is : ", x)
+n = input("Enter text to add to file : ")
+print("Data successfully added to file - output.txt!")
+print()
+f1 = open('output.txt', 'w')
+op = f1.write(n)
+z = f1.write(" \n")
+f1.close()
+
+m = input("Enter additional text to append to file: ")
+print("Data successfully appended!")
+f1 = open('output.txt', 'a')
+pq = f1.write(m)
+f1.close()
+print()
+
+print("Final content of output.text: ")
+f1 = open('output.txt', 'r')
+y = f1.read()
+print(y)
+f1.close()
